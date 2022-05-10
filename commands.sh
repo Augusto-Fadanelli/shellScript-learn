@@ -44,3 +44,46 @@ func
 # ~/.inputrc -> Contém variáveis e configurações do modo de operação do bash em relação às teclas (vinculação).
 # ~/.bash_logout -> Executado automaticamente no logout.
 
+# Diretórios
+# /etc/profile.d/ -> Executa todos os scripts neste diretório após o login do usuário
+
+# Variáveis
+# $BASH_ENV -> Configuração para shell não interativo
+
+# Para executar um script.sh, deve-se dar permissão de execução com chmod +x script.sh
+
+# Variáveis de ambiente
+echo "Usuario: $USER"
+echo "Diretorio home: $HOME"
+echo "UID do usuario: $UID"
+
+# Redirecionar saída de comandos a variáveis
+dia=`date`
+echo "A data é $dia"
+
+# Redirecionar conteúdo de um arquivo para um comando
+echo < arq.txt
+
+# Redirecionamento de Entrada Inline
+wc << EOF
+> teste
+> abhsbdh
+EOF
+
+# Operações matemáticas (O Bash calcúla apenas com números inteiros, mas pode-se utilizar a calculadora do bash [bc])
+var1=$[2 + 6]
+echo $var1
+
+# calculadora bc
+bc # Abre a calculadora
+bc -q # Abre sem mostrar as 'boas vindas'
+scale=2 # Define a quantidade de casas decimais após o ponto
+a=4 # Criar variáveis
+b=6
+a/b # Manipular variáveis
+sqrt(81) # Raiz quadrada
+quit # Sai
+
+
+
+
