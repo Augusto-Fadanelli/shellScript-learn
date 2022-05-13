@@ -84,6 +84,71 @@ a/b # Manipular variáveis
 sqrt(81) # Raiz quadrada
 quit # Sai
 
+# Status de saída do último comando
+echo $?
+# se 0, o comando anterior foi executado com êxito
+# se 127, o comando anterior retornou um erro
 
+# Mudar o status de saída em um script sh
+# dentro script
+exit 6 # Retorna 6 como status de saída (Obs.: o número deve estar entre 0 e 255)
+exit $var # Retorna o valor de uma variável
+# no terminal
+echo $?
 
+# Sintaxe if then:
+if comando
+then
+  comandos
+fi
+# ou
+if comando; then
+  comandos
+fi
+# else
+if comando
+then
+  comandos
+else
+  comandos
+fi
+
+# Sintaxe if aninhado:
+if comando1
+then
+  comandos
+elif comando2
+then
+  comandos
+elif comando3
+then
+  comandos
+else
+  comandos
+fi
+
+# test
+if test condição
+then
+  comandos
+fi
+# ou
+if[ condição ]
+then
+  comandos
+fi
+# Operadores test com números
+n1 -eq n2 # n1 == n2
+n1 -ge n2 # n1 >= n2
+n1 -gt n2 # n1 > n2
+n1 -le n2 # n1 <= n2
+n1 -lt n2 # n1 < n2
+n1 -ne n2 # n1 != n2
+# Operadores test com strings
+str1 = str2 # str1 == str2
+str1 != str2
+str1 < str2
+str1 > str2
+-n str1 # Se str1 não está vazia
+-z str1 # Se str1 está vazia
 
