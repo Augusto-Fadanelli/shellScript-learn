@@ -151,4 +151,77 @@ str1 < str2
 str1 > str2
 -n str1 # Se str1 não está vazia
 -z str1 # Se str1 está vazia
+# Comparar arquivos e diretórios
+-e caminho    # Verifica se o caminho existe
+-d diretório  # Verifica se o caminho existe e se é um diretório
+-f arquivo    # Verifica se o caminho existe e se é um arquivo
+-r arquivo    # Verifica se o arquivo existe e se possui permissão de leitura para o usuário atual
+-s arquivo    # Verifica se o arquivo existe e não está vazio
+-w arquivo    # Verifica se o arquivo existe e tem permissão de escrita
+-x arquivo    # Verifica se o arquivo existe e possui permissão de execução
+-O arquivo    # Verifica se o arquivo existe e é propriedade do usuário atual
+-G arquivo    # Verifica se o arquivo existe e seu grupo padrão é o mesmo do usuário atual
+arq1 -nt arq2 # Verifica se arq1 é mais novo do que arq2
+arq1 -ot arq2 # Verifica se arq1 é mais antigo que arq2
+# Operadores booleanos
+# AND
+[ condição1 ] && [ condição2 ]
+# OR
+[ condição1 ] || [ condição2 ]
+
+# Case
+case <variável> in
+  valor1)
+    comandos1;;
+  valor2)
+    comandos2;;
+  valor3 | valor4) # valor3 ou valor4
+    comandos-3-e-4;;
+  *)
+    comandos-padrão;;
+esac
+
+# For
+for valor in lista
+do
+  comandos
+done
+
+for((i=1;i<=15;i++))
+do
+  echo "Número: $i"
+done
+
+# While
+var = 100
+while [ $var -gt 0 ]
+do
+  echo $var
+  var=$[ $var -1 ]
+done
+
+# Until
+until comando_de_teste
+do
+  Bloco de comandos a executar
+done
+
+var = 50
+until [ $var -eq 0 ] # Executa até que seja verdadeiro
+do
+  echo $var
+  var=$[ $var -2 ]
+done
+
+# Parâmetros
+$1 # Primeiro parametro passado
+$2 # Segundo parametro passado
+$3 # Terceiro parametro passado
+...
+# Ex.: ./quadrado.sh 9
+quadrado=$[ $1 * $1 ]
+echo "O quadrado de $1 é $quadrado"
+
+# Parâmetros especiais
+$# # Mostra o número de parâmetros fornecidos ao rodar o script
 
