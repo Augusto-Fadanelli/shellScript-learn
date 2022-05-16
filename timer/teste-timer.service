@@ -1,0 +1,12 @@
+[Unit]
+Description=Executa teste-timer.sh
+Wants=teste-timer.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/free
+ExecStart=/etc/systemd/system/teste-timer.sh
+ExecStart=/usr/bin/lsblk
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Executa teste-timer.sevice a cada minuto
+
+[Timer]
+Unit=teste-timer.service
+OnCalendar=*-*-* *:*:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
