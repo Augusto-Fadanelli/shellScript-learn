@@ -4,9 +4,7 @@ Wants=teste-timer.timer
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/free
-ExecStart=/usr/bin/teste-timer.sh
-ExecStart=/usr/bin/lsblk
+ExecStart=/etc/systemd/system/teste-timer.sh
 
 [Install]
 WantedBy=multi-user.target
