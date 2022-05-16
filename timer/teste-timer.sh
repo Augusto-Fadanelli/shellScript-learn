@@ -10,10 +10,12 @@
 # systemctl list-unit-file
 
 # Como configurar:
-# Copie teste-timer.* para /etc/systemd/system/
+# Copie teste-timer.timer e teste-timer.service para /etc/systemd/system/
 # ative o timer: sudo systemctl start teste-timer.timer
 # sudo systemctl enable teste-timer.timer
 # systemctl status teste-timer.timer
+
+# Obs: os logs aparecerão no diretório /root
 
 arq=`date +"%d-%m-%y-%H:%M"`
 echo oi >> ~/teste-log.$arq
