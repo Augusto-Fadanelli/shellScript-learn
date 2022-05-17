@@ -1,7 +1,10 @@
 # Links úteis:
 # https://www.vivaolinux.com.br/dica/Introducao-ao-awk
 
+# sudo chmod 755 change-words.sh
+
 # Substitui palavras no arquivo the-hobbit.txt
+# Exemplo: ./change-words.sh hobbit robert
 
 #!/bin/bash
 
